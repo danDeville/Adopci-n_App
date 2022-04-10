@@ -2,6 +2,20 @@ let btnPerros = document.getElementById('btnCategoria1')
 let btnGatos = document.getElementById('btnCategoria2')
 let listarCard = document.getElementById('listarCard')
 let infoModal = document.getElementById('infoModal')
+let loaderContainer = document.getElementById('loaderContainer')
+let introModal = document.getElementById('introModal')
+let btnIntroModal = document.getElementById('btnIntroModal')
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+    loaderContainer.classList.add('hidden')
+
+    btnIntroModal.click()
+  }, 2500)
+})
+
 
 btnPerros.addEventListener('click', () => {
   renderMascotas('perros')

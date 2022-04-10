@@ -7,6 +7,7 @@ const  objetoFormulario = {
   apellido: document.getElementById('userLastName'),
   email: document.getElementById('userEmail'),
   actualizar: document.getElementById('userUpdate'),
+  picture: document.getElementById('userPicture'),
 }
 
 const toggleEditar = (e) => {
@@ -22,6 +23,7 @@ const guardarEdicionUsuario = async (e) => {
       last: objetoFormulario.apellido.value,
     },
     email: objetoFormulario.email.value,
+    picture: objetoFormulario.picture.value,
   }
 
   const {data:resultado} = await axios.put(`${API_HOST}/usuarios/3`, datos)
@@ -37,6 +39,7 @@ const renderPerfilSesion = async () => {
   objetoFormulario.nombre.value = first
   objetoFormulario.apellido.value = last
   objetoFormulario.email.value = email
+  objetoFormulario.picture.value = picture
 
   cambiarEstadoEditar(true)
 
