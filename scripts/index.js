@@ -3,9 +3,6 @@ let btnGatos = document.getElementById('btnCategoria2')
 let listarCard = document.getElementById('listarCard')
 let infoModal = document.getElementById('infoModal')
 
-const API_HOST = 'http://localhost:3000'
-// const API_HOST = 'https://api-adopcion-mascotas.herokuapp.com'
-
 btnPerros.addEventListener('click', () => {
   renderMascotas('perros')
 })
