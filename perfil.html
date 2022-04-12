@@ -16,28 +16,107 @@
     <title>Adopción App Perfil | Proyecto Sprint 1</title>
   </head>
 
-  <body>
-    <main>
-      <div id="containerAvatar">
+  <body class="font-sans bg-Primary">
+    <main class="py-5 px-4">
+      <h2
+        class="text-2xl text-Black font-extrabold"
+        style="margin-bottom: 32px"
+      >
+        Perfil
+      </h2>
 
-
+      <div
+        id="containerAvatar"
+        class="flex flex-column items-center justify-center w-full mb-4"
+      >
       </div>
 
       <div id="containerDatos">
-        <form id="form" enctype="application/json">
-            <input type="hidden" name="picture" value="" id="userPicture">
+        <form id="form" enctype="application/json" class="w-full h-auto">
+          <input type="hidden" name="picture" value="" id="userPicture">
 
-            <label for="userName">Nombre</label>
-            <input type="text" id="userName" name="name[first]" placeholder="Ingrese nombre de usuario" disabled="${estadoEditar}" required>
+          <label
+            for="userName"
+            class="block text-base font-normal mb-1"
+          >
+            Nombre
+          </label>
+          <input
+            type="text"
+            id="userName"
+            name="name[first]"
+            placeholder="Ingrese nombre de usuario"
+            disabled="${estadoEditar}"
+            required
+            class="
+              w-full h-12
+              py-2 px-3 mb-3
+              text-base text-Black
+              bg-white border border-Gray
+              rounded-md
+              focus:outline-none focus:border-gray-500
+            "
+          >
 
-            <label for="userLastName">Apellido</label>
-            <input type="text" id="userLastName" name="name[last]" placeholder="Ingrese apellido del usuario" disabled="${estadoEditar}" required>
+          <label
+            for="userLastName"
+            class="block text-base font-normal mb-1"
+          >
+            Apellido
+          </label>
+          <input
+            type="text"
+            id="userLastName"
+            name="name[last]"
+            placeholder="Ingrese apellido del usuario"
+            disabled="${estadoEditar}"
+            required
+            class="
+              w-full h-12
+              py-2 px-3 mb-3
+              text-base text-Black
+              bg-white border border-Gray
+              rounded-md
+              focus:outline-none focus:border-gray-500
+            "
+          >
 
-            <label for="userEmail">Correo</label>
-            <input type="email" id="userEmail" placeholder="Ingrese correo del usuario" disabled="${estadoEditar}" required>
+          <label
+            for="userEmail"
+            class="block text-base font-normal mb-1"
+          >
+            Correo
+          </label>
+          <input
+            type="email"
+            id="userEmail"
+            placeholder="Ingrese correo del usuario"
+            disabled="${estadoEditar}"
+            required
+            class="
+              w-full h-12
+              py-2 px-3 mb-3
+              text-base text-Black
+              bg-white border border-Gray
+              rounded-md
+              focus:outline-none focus:border-gray-500
+            "
+          >
 
-            <button type="submit" id="userUpdate">Guardar</button>
-          </form>
+          <button
+            type="submit"
+            id="userUpdate"
+            class="
+              w-full h-12
+              px-3
+              text-base text-white font-semibold
+              bg-Black
+              rounded-full
+            "
+          >
+            Guardar
+          </button>
+        </form>
       </div>
     </main>
 

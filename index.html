@@ -16,32 +16,45 @@
     <title>Adopción App Home | Proyecto Sprint 1</title>
   </head>
 
-  <body class="font-sans bg-Primary">
-    <!-- <section id="loaderContainer" class="loader-general">
-      <img src="https://res.cloudinary.com/dz8on44po/image/upload/v1649609344/dogs/leonidasesteban.com_omxovc.png" alt="Loader">
+  <body class="relative font-sans bg-Primary">
+    <section
+      id="loaderContainer"
+      class="
+        z-20 absolute
+        top-0 left-0
+        w-screen h-screen
+        flex justify-center items-center
+        bg-Primary
+      "
+    >
+      <img
+        id="logo-loader"
+        src="https://res.cloudinary.com/dz8on44po/image/upload/v1649609344/dogs/leonidasesteban.com_omxovc.png"
+        alt="Loader"
+      >
     </section>
 
-    <button type="button" class="btn btn-primary hidden" data-bs-toggle="modal" data-bs-target="#introModal" id="btnIntroModal">
-      Launch demo modal
+    <button
+      type="button"
+      class="hidden"
+      data-bs-toggle="modal"
+      data-bs-target="#introModal"
+      id="btnIntroModal"
+    >
     </button>
 
     <div class="modal fade" id="introModal" tabindex="-1" aria-labelledby="introModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-fullscreen">
         <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            ...
+          <div class="modal-body bg-Primary">
+
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
 
     <main class="py-5 px-4">
       <h2 class="mb-4 text-2xl text-Black font-extrabold">
@@ -111,7 +124,6 @@
       <div class="modal fade" id="containerModal" tabindex="-1" aria-labelledby="containerModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-fullscreen">
           <div class="modal-content relative" id="infoModal">
-
           </div>
         </div>
       </div>

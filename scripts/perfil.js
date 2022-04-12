@@ -44,10 +44,21 @@ const renderPerfilSesion = async () => {
   cambiarEstadoEditar(true)
 
   containerAvatar.innerHTML = `
-    <div>
-      <img src="${picture}">
-      <p>${first} ${last} </p>
-      <button id ="editarCuenta">Editar Cuenta</button>
+    <div class="flex flex-column items-center text-center">
+      <img
+        src="${picture}"
+        alt="${first} ${last}"
+        class="w-20 h-20 rounded-full mb-2"
+      >
+      <p class="text-base font-normal text-Black">
+        ${first} ${last}
+        </p>
+      <button
+        id ="editarCuenta"
+        class="text-sm font-normal text-Black"
+      >
+        Editar Cuenta
+      </button>
     </div>
   `
 
@@ -63,4 +74,3 @@ const cambiarEstadoEditar = (estado = false) => {
 }
 
 renderPerfilSesion()
-

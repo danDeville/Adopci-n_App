@@ -5,12 +5,31 @@ body {
   background-color: aqua;
 }
 
-.loader-general {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vh;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 2;
+// Layout
+#logo-loader {
+  animation: crecer 2s infinite ease-in-out;
+}
+
+@keyframes crecer {
+  0% {
+    transform: scale(0.5);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(0.5);
+  }
+}
+
+// Chat
+.container-main-chat {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: calc(100vh - 144px);
 }
