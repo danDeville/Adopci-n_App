@@ -6,6 +6,7 @@ tailwind.config = {
         Secondary: '#A786DF',
         Tertiary: '#D9D4E7',
         Green: '#85D1CE',
+        Grey: '#535353',
         Blue: '#91C1D7',
         White: '#FFFFFE',
         Black: '#0E172C'
