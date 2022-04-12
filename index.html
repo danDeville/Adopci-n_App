@@ -1,135 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="./scripts/theme.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <title>Adopción App Home | Proyecto Sprint 1</title>
-  </head>
 
-  <body class="relative font-sans bg-Primary">
-    <section
-      id="loaderContainer"
-      class="
-        z-20 absolute
-        top-0 left-0
-        w-screen h-screen
-        flex justify-center items-center
-        bg-Primary
-      "
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./styles/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./scripts/theme.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <title>Adopción App Home | Proyecto Sprint 1</title>
+</head>
+
+<body class="relative font-sans bg-Primary">
+  <section
+    id="loaderContainer"
+    class="
+      z-20 absolute
+      top-0 left-0
+      w-screen h-screen
+      flex justify-center items-center
+      bg-Primary
+    "
     >
-      <img
-        id="logo-loader"
-        src="https://res.cloudinary.com/dz8on44po/image/upload/v1649609344/dogs/leonidasesteban.com_omxovc.png"
-        alt="Loader"
+    <img id="logo-loader"
+      src="https://res.cloudinary.com/dz8on44po/image/upload/v1649609344/dogs/leonidasesteban.com_omxovc.png"
+      alt="Loader"
+    >
+  </section>
+
+  <button
+    type="button"
+    class="hidden"
+    data-bs-toggle="modal"
+    data-bs-target="#introModal"
+    id="btnIntroModal"
+  >
+  </button>
+
+  <div
+    class="modal fade"
+    id="introModal"
+    tabindex="-1"
+    aria-labelledby="introModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-fullscreen">
+      <div
+        class="
+          modal-content
+          relative w-full h-screen
+          p-4 bg-Primary overflow-y-hidden
+        "
       >
-    </section>
+        <div
+          id="carouselExampleControlsNoTouching"
+          class="carousel slide"
+          data-bs-touch="false"
+          data-bs-interval="false"
+        >
+          <div class="carousel-inner relative">
+            <div class="carousel-item active relative h-screen">
+              <div
+                class="
+                  relative flex flex-col
+                  justify-center items-center
+                  w-full h-full
+                "
+              >
+                <img
+                  src="https://res.cloudinary.com/dz8on44po/image/upload/v1649350510/dogs/esperando_adopci%C3%B3n_s4jxwk.png"
+                  alt="Ilustración de mascotas"
+                  class="m-0"
+                >
+                <div class="mb-5 text-center">
+                  <h3 class="mb-2 text-lg font-bold text-Black">
+                    Encuentra tu amigo fiel
+                  </h3>
+                  <p class="text-base font-normal text-Grey">
+                    Cuando adoptas a una mascota, cosas maravillosas suceden en
+                    tu vida. Si estás pensando en tener un nuevo integrante en
+                    tu familia; ¡estás en el lugar correcto!
+                  </p>
+                </div>
+                <button
+                  class="
+                    carousel-control-next
+                    relative left-0
+                    w-full h-12
+                    text-sm font-semibold text-white
+                    bg-Black rounded-full opacity-100
+                  "
+                  type="button"
+                  data-bs-target="#carouselExampleControlsNoTouching"
+                  data-bs-slide="next"
+                >
+                  Siguiente
+                </button>
+              </div>
+            </div>
 
-    <button
-      type="button"
-      class="hidden"
-      data-bs-toggle="modal"
-      data-bs-target="#introModal"
-      id="btnIntroModal"
-    >
-    </button>
-
-    <div class="modal fade" id="introModal" tabindex="-1" aria-labelledby="introModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-fullscreen">
-        <div class="modal-content">
-          <div class="modal-body bg-Primary">
-
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <div class="carousel-item relative h-screen">
+              <div
+                class="
+                  relative flex flex-col
+                  justify-center items-center
+                  w-full h-full
+                "
+              >
+                <img
+                  src="https://res.cloudinary.com/dz8on44po/image/upload/v1649350510/dogs/Adoptado_wvjzpc.png"
+                  alt="Ilustración de mascotas"
+                  class="m-0"
+                >
+                <div class="mb-5 text-center">
+                  <h3 class="mb-2 text-lg font-bold text-Black">
+                    Crea una nueva historia
+                  </h3>
+                  <p class="text-base font-normal text-Grey">
+                    Adoptar puede ser una de las experiencias más grandiosas
+                    de tu vida, donde compartirás bellos momentos con estos
+                    amiguitos fieles, tiernos y llenos de amor para regalar.
+                  </p>
+                </div>
+                <button
+                  class="
+                    carousel-control-next
+                    relative left-0
+                    w-full h-12
+                    text-sm font-semibold text-white
+                    bg-Black rounded-full opacity-100
+                  "
+                  type="button"
+                  data-bs-dismiss="modal">
+                  Siguiente
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <main class="py-5 px-4">
-      <h2 class="mb-4 text-2xl text-Black font-extrabold">
-        Adopta una adorable mascota
-      </h2>
+  <main class="py-5 px-4">
+    <h2 class="mb-4 text-2xl text-Black font-extrabold">
+      Adopta una adorable mascota
+    </h2>
 
-      <section class="mb-4">
-        <p class="mb-2 text-lg text-Black font-semibold">
-          Categorías de mascotas
-        </p>
-        <div class="grid gap-3.5 grid-cols-2">
-          <button
-            id="btnCategoria1"
+    <section class="mb-4">
+      <p class="mb-2 text-lg text-Black font-semibold">
+        Categorías de mascotas
+      </p>
+      <div class="grid gap-3.5 grid-cols-2">
+        <button
+          id="btnCategoria1"
+          class="
+            flex items-center justify-start
+            w-full h-20 p-2
+            text-base text-white font-bold
+            bg-Black rounded-lg
+          "
+        >
+          <div
             class="
-              flex items-center justify-start
-              w-full h-20 p-2
-              text-base text-white font-bold
-              bg-Black rounded-lg
-            "
-          >
-            <div
-              class="
                 flex items-center justify-center
                 w-16 h-16 mr-3
                 bg-Blue rounded-full
               "
             >
-              <img
-                src="https://res.cloudinary.com/dz8on44po/image/upload/v1649696061/dogs/perros_l6croh.png"
-                height="40px"
-              >
-            </div>
-            Perros
-          </button>
+            <img src="https://res.cloudinary.com/dz8on44po/image/upload/v1649696061/dogs/perros_l6croh.png"
+              height="40px">
+          </div>
+          Perros
+        </button>
 
-          <button
-            id="btnCategoria2"
+        <button
+          id="btnCategoria2"
+          class="
+            flex items-center justify-start
+            w-full h-20 p-2
+            text-base text-white font-bold
+            bg-Black rounded-lg
+          "
+        >
+          <div
             class="
-              flex items-center justify-start
-              w-full h-20 p-2
-              text-base text-white font-bold
-              bg-Black rounded-lg
+              flex items-center justify-center
+              w-16 h-16 mr-3
+              bg-Green rounded-full
             "
           >
-            <div
-              class="
-                flex items-center justify-center
-                w-16 h-16 mr-3
-                bg-Green rounded-full
-              "
+            <img
+              src="https://res.cloudinary.com/dz8on44po/image/upload/v1649696061/dogs/gatos_lg8far.png"
+              height="40px"
             >
-              <img
-                src="https://res.cloudinary.com/dz8on44po/image/upload/v1649696061/dogs/gatos_lg8far.png"
-                height="40px"
-              >
-            </div>
-            Gatos
-          </button>
-        </div>
-      </section>
-
-      <div class="container p-0">
-        <div class="grid gap-3.5 grid-cols-2" id="listarCard">
-        </div>
-      </div>
-
-      <div class="modal fade" id="containerModal" tabindex="-1" aria-labelledby="containerModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-fullscreen">
-          <div class="modal-content relative" id="infoModal">
           </div>
+          Gatos
+        </button>
+      </div>
+    </section>
+
+    <div class="container p-0">
+      <div class="grid gap-3.5 grid-cols-2" id="listarCard">
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="containerModal"
+      tabindex="-1"
+      aria-labelledby="containerModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content relative" id="infoModal">
         </div>
       </div>
-    </main>
+    </div>
+  </main>
 
-    <script src="./scripts/constantes.js"></script>
-    <script src="./scripts/index.js"></script>
-  </body>
+  <script src="./scripts/constantes.js"></script>
+  <script src="./scripts/index.js"></script>
+</body>
+
 </html>

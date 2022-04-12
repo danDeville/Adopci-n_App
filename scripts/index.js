@@ -39,15 +39,16 @@ const renderMascotas = async (mascota) => {
     listarCard.innerHTML += `
       <div
         class="
-        card relative
-        w-full h-64
-        rounded-2xl
-        border-0
-        cursor-pointer"
-        type="button"
-        data-bs-toggle="modal"
-        data-bs-target="#containerModal"
-        onclick="renderModal('${id},${mascota}')"
+          card relative
+          w-full h-64
+          rounded-2xl
+          border-0
+          cursor-pointer"
+          type="button"
+          data-bs-toggle="modal"
+          data-bs-target="#containerModal"
+          onclick="renderModal('${id},${mascota}')
+        "
       >
         <img
           src="${imagen}"
