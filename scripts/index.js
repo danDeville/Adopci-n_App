@@ -18,7 +18,6 @@ let introModal = document.getElementById('introModal')
 // let btnIntroModal = document.getElementById('btnIntroModal')
 // btnIntroModal.addEventListener('click', toggleCerrar)
 
-
 let btnIntroModal = document.getElementById('btnIntroModal')
 document.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
@@ -28,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   }, 2500)
 })
-
 
 
 btnPerros.addEventListener('click', () => {
@@ -43,11 +41,11 @@ const renderMascotas = async (mascota) => {
   const { data:pets } = await axios.get(`${API_HOST}/${mascota}?_expand=usuario`)
 
   if (mascota === 'perros') {
-    btnPerros.classList.add('active')
-    btnGatos.classList.remove('active')
+    btnPerros.classList.add('active_pets')
+    btnGatos.classList.remove('active_pets')
   } else {
-    btnGatos.classList.add('active')
-    btnPerros.classList.remove('active')
+    btnGatos.classList.add('active_pets')
+    btnPerros.classList.remove('active_pets')
   }
 
   listarCard.innerHTML = ''
@@ -102,7 +100,7 @@ const renderModal = async(params) => {
     </div>
   `
   const { data:mascotaDetalle } = await axios.get(`${API_HOST}/${mascota}/${mascotaId}?_expand=usuario`)
-  const {id, imagen, nombre, raza, edad, personalidad, descripcion, usuario, ubicacion} = mascotaDetalle
+  const {id, imagen, nombre, raza, edad, personalidad, sexo, descripcion, usuario, ubicacion} = mascotaDetalle
   const [p1, p2, p3] = personalidad
 
   infoModal.innerHTML = `
@@ -143,8 +141,12 @@ const renderModal = async(params) => {
       <section class="flex flex-row items-center justify-between mb-4">
         <div class="flex flex-row items-center">
           <h3 class="mr-2 text-2xl font-bold text-Black">${nombre}</h3>
+
           <img
-            src="https://res.cloudinary.com/dz8on44po/image/upload/v1649731328/dogs/Property_1_male_gq5uzh.png"
+            ${sexo == 'Macho'
+              ? 'src="https://res.cloudinary.com/dz8on44po/image/upload/v1649731328/dogs/Property_1_male_gq5uzh.png"'
+              : 'src="https://res.cloudinary.com/dz8on44po/image/upload/v1649857649/dogs/Property_1_female_tfpops.png"'
+            }
             height="32px" width="32px"
           >
         </div>

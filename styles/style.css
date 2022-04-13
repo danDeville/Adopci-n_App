@@ -21,6 +21,14 @@ body {
     transform: scale(0.5);
   }
 }
+.pets {
+  opacity: 0.5;
+}
+
+.active_pets {
+  opacity: 1;
+}
+
 .main-container {
   position: relative;
   width: 100%;
