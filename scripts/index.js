@@ -4,29 +4,26 @@ let listarCard = document.getElementById('listarCard')
 let infoModal = document.getElementById('infoModal')
 let loaderContainer = document.getElementById('loaderContainer')
 let introModal = document.getElementById('introModal')
-
-
-// const toggleCerrar = (e) => {
-//   localStorage.setItem('Intro', 'true')
-//   if(localStorage.getItem('Intro') === 'true'){
-//     btnIntroModa.disabled = true
-//   } else {
-//     btnIntroModa.disabled = false
-//   }
-// }
-
-// let btnIntroModal = document.getElementById('btnIntroModal')
-// btnIntroModal.addEventListener('click', toggleCerrar)
-
 let btnIntroModal = document.getElementById('btnIntroModal')
+
+btnIntroModal.disabled = false
+
+const stateHandle = () => {
+  localStorage.setItem('valueBtn', true)
+  if (JSON.parse(localStorage.getItem('valueBtn')) === true) {
+    btnIntroModal.disabled = true;
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   setTimeout(() => {
     loaderContainer.classList.add('hidden')
 
     btnIntroModal.click()
-
   }, 2500)
 })
+
+btnIntroModal.addEventListener('click', stateHandle);
 
 
 btnPerros.addEventListener('click', () => {

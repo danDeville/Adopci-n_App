@@ -22,6 +22,7 @@ const renderUsuario = async () => {
       type="button"
       data-bs-dismiss="modal"
       aria-label="Close"
+      onclick="irHome()"
     >
       <img
         src="https://res.cloudinary.com/dz8on44po/image/upload/v1649701544/dogs/Property_1_Variant5_1_s7taqp.svg"
@@ -41,5 +42,9 @@ const renderUsuario = async () => {
     </div>
   `
 }
-
 renderUsuario ()
+
+const irHome = () => {
+  window.location.href = 'index.html'
+}
+
