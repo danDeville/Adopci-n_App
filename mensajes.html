@@ -20,18 +20,76 @@
   <body class="font-sans bg-Primary">
     <main class="main-container">
       <h2 class="mb-4 text-2xl text-Black font-extrabold">
-        Mascotas Favoritas
+        Mensajes
       </h2>
 
-      <div class="grid gap-3.5 grid-cols-2 mb-3" id="listarPerros">
-      </div>
+      <div class="grid gap-3.5 grid-cols-1" id="mensajes">
+        <div
+          class="
+            flex items-center justify-between
+            w-full h-20
+            bg-white p-2
+            rounded-lg
+          "
+        >
+          <div class="flex items-center">
+            <img
+              src=""
+              class="w-16 h-16 mr-2 rounded-full border-3 border-Green"
+            >
+            <div class="flex flex-column mr-2">
+              <div class="flex items-center justify-between">
+                <strong>Andrew Alfred</strong>
+                <span class="text-sm text-Grey">4:36</span>
+              </div>
+              <span class="text-sm text-Grey">
+                ¡Hola! claro, podemos acordar un lugar y hora para que
+                conoscas...
+              </span>
+            </div>
+          </div>
+          <img
+            src="https://res.cloudinary.com/dz8on44po/image/upload/v1649784554/dogs/Property_1_chevron-right_cnvec4.png"
+            alt=""
+            class="w-6 h-6"
+          >
+        </div>
 
-      <div class="grid gap-3.5 grid-cols-2" id="listarGatos">
+        <div
+          class="
+            flex items-center justify-between
+            w-full h-20
+            bg-white p-2
+            rounded-lg
+          "
+        >
+          <div class="flex items-center">
+            <img
+              src=""
+              class="w-16 h-16 mr-2 rounded-full border-3 border-Green"
+            >
+            <div class="flex flex-column mr-2">
+              <div class="flex items-center justify-between">
+                <strong>Andrew Alfred</strong>
+                <span class="text-sm text-Grey">4:36</span>
+              </div>
+              <span class="text-sm text-Grey">
+                ¡Hola! claro, podemos acordar un lugar y hora para que
+                conoscas...
+              </span>
+            </div>
+          </div>
+          <img
+            src="https://res.cloudinary.com/dz8on44po/image/upload/v1649784554/dogs/Property_1_chevron-right_cnvec4.png"
+            alt=""
+            class="w-6 h-6"
+          >
+        </div>
       </div>
     </main>
 
     <div class="menu_wrapper">
-      <nav class="nav" id="navbar">
+      <nav class="nav p-0" id="navbar">
         <li>
           <a href="./index.html" class="btn">
             <span class="material-icons-outlined">home</span>
@@ -40,14 +98,14 @@
         </li>
 
         <li>
-          <a href="./mensajes.html" class="btn">
+          <a href="./mensajes.html" class="btn active">
             <span class="material-icons-outlined">chat_bubble_outline</span>
             <p>Mensajes</p>
           </a>
         </li>
 
         <li>
-          <a href="./favoritos.html" class="btn active">
+          <a href="./favoritos.html" class="btn">
             <span class="material-icons-outlined">favorite_border</span>
             <p>Favoritos</p>
           </a>
@@ -64,6 +122,6 @@
       </nav>
     </div>
     <script src="./scripts/constantes.js"></script>
-    <script src="./scripts/favoritos.js"></script>
+    <script src="./scripts/mensajes.js"></script>
   </body>
 </html>
